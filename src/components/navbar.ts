@@ -11,11 +11,11 @@ export default class Navbar extends Component {
             <nav class="flex justify-between items-center w-full p-3">
                 <img src="logo.png" alt="logo" width=60 />
                 <div class="flex gap-6">
-                    <button class="text-white text-xs" onClick=${this.register(() => this.onClick('leaderboard'))}> Leaderboard </button>
-                    <button class="text-white text-xs" onClick=${this.register(() => this.onClick('games'))}> Jeux </button>
-                    <button class="text-white text-xs" onClick=${this.register(() => this.onClick('story'))}> Histoire </button>
-                    <button class="text-white text-xs" onClick=${this.register(() => this.onClick('testimonials'))}> Avis </button>
-                    <button class="text-white text-xs" onClick=${this.register(() => this.onClick('partners'))}> Partenaires </button>
+                    <button class="text-white" onClick=${this.register(() => this.onClick('leaderboard'))}> Leaderboard </button>
+                    <button class="text-white" onClick=${this.register(() => this.onClick('games'))}> Jeux </button>
+                    <button class="text-white" onClick=${this.register(() => this.onClick('story'))}> Histoire </button>
+                    <button class="text-white" onClick=${this.register(() => this.onClick('testimonials'))}> Avis </button>
+                    <button class="text-white" onClick=${this.register(() => this.onClick('partners'))}> Partenaires </button>
                 </div>
                 <div class="flex gap-3">
                     <div class="flex flex-col">

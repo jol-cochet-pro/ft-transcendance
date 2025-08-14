@@ -4,6 +4,7 @@ import CallToAction from './call-to-action'
 import Leaderboard from './leaderboard'
 import Games from './games'
 import Story from './story'
+import Testimonials from './testimonials'
 
 export default class LandingPage extends Component {
     public render(): string {
@@ -13,7 +14,11 @@ export default class LandingPage extends Component {
                 ${new CallToAction()}
                 ${new Leaderboard()}
                 ${new Games()}
-                ${new Story()}
+                <div class="bg-gradient-to-b from-background-light from-16% via to-63% via-background-light">
+                    ${new Story()}
+                    ${new Testimonials()}
+                <div>
+                <div class="h-[500px]"> </div> 
             </div>
         `
     }

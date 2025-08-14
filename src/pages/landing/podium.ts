@@ -19,7 +19,7 @@ export default class Podium extends Component {
                 </div>
                 <div class="relative flex flex-col justify-center items-center bg-gradient-to-b from-surface to-black w-[200px] rounded-t-lg" style="height: ${this._size}">
                     <div class="absolute rounded-lg w-fit p-1.5 top-0 left-[50%] -translate-[50%]" style="background-color: ${this._color}">
-                        <img class="fill-white" src="trophy.svg" alt="trophy" />
+                        <i data-lucide="trophy" class="stroke-[#EDEDEDED]" ></i>
                     </div>
                     <h3 class="text-white text-sm font-semibold"> 340 </h3>
                     <p class="text-white text-xs"> euros gagnés </p>

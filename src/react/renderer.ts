@@ -1,4 +1,5 @@
 import Component from './component'
+import { createIcons, icons } from "lucide";
 
 export default class HTMLRenderer {
     public render(page: Component) {
@@ -6,12 +7,12 @@ export default class HTMLRenderer {
         app!.innerHTML = ''
         const html = this.parse(page)
         app!.appendChild(html)
+        createIcons({ icons });
     }
 
     private parse(page: Component): ChildNode {
         const htmlStr: string = page.render()
         const parser = new DOMParser()
-
         const html = parser.parseFromString(htmlStr, 'text/html')
         const body = html.body
         const element = body.firstChild
