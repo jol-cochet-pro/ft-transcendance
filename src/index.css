@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import 'tailwindcss';
 
-:root {
-    --background: rgba(52, 53, 65, 1);
+@theme {
+    --color-background: rgba(40, 40, 48, 1);
+    --color-surface: rgba(52, 53, 65, 1);
+    --color-primary: rgba(215, 195, 60, 1);
 }

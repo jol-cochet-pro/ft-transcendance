@@ -19,10 +19,10 @@ export default class HTMLRenderer {
             throw new Error('Error in template')
         }
         for (const clickable of body.querySelectorAll('[onclick]')) {
-            const id = clickable.getAttribute('onclick');
+            const id = clickable.getAttribute('onclick')
             if (id && Component.handlers[id]) {
-                clickable.removeAttribute('onclick');
-                clickable.addEventListener('click', Component.handlers[id]);
+                clickable.removeAttribute('onclick')
+                clickable.addEventListener('click', Component.handlers[id])
             }
         }
         return element
