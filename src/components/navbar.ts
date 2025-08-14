@@ -1,9 +1,10 @@
-import Component from "../pages/component";
+import Component from "../react/component";
 
 
 export default class Navbar extends Component {
 
     private onClick(url: string) {
+        // TODO scroll to appropriate sections
         console.log(url);
     }
 

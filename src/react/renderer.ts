@@ -1,4 +1,4 @@
-import Component from '../pages/component'
+import Component from './component'
 
 export default class HTMLRenderer {
     public render(page: Component) {

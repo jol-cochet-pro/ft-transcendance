@@ -1,4 +1,4 @@
-import Component from '../component'
+import Component from '../../react/component'
 
 export default class NotFoundPage extends Component {
     public render(): string {

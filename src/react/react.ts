@@ -1,9 +1,11 @@
+import type Component from './component'
 import Navigator from './navigator'
 
 export default class React {
-    static navigator = new Navigator()
+    private static navigator = new Navigator()
 
-    static init() {
+    static init(initData : { routes: Record<string, new () => Component> }) {
+        this.navigator.routes = initData.routes;
         window.addEventListener('popstate', () => {
             React.navigator.navigate(location.pathname, false)
         })

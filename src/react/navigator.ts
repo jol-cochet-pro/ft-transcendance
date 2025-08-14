@@ -1,19 +1,19 @@
-import type Component from '../pages/component'
+import type Component from './component'
 import NotFoundPage from '../pages/error/not-found'
-import LandingPage from '../pages/landing/page'
 import HTMLRenderer from './renderer'
 
-type ComponentConstructor = new () => Component
 
 export default class Navigator {
-    renderer: HTMLRenderer = new HTMLRenderer()
-    routes: Map<string, ComponentConstructor> = new Map([
-        ['/landing', LandingPage],
-    ])
+    private _renderer: HTMLRenderer = new HTMLRenderer()
+    private _routes: Record<string, new () => Component> = {};
 
     navigate(path: string, addHistory: boolean = true) {
-        const page: Component = new (this.routes.get(path) || NotFoundPage)()
+        const page: Component = new (this._routes[path] || NotFoundPage)()
         if (addHistory) history.pushState(null, '', path)
-        this.renderer.render(page)
+        this._renderer.render(page)
+    }
+
+    set routes(newRoutes: Record<string, new () => Component>) {
+        this._routes = newRoutes
     }
 }
