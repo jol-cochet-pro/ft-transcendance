@@ -1,18 +1,12 @@
-import React from "../../react/react";
-import type Component from "../component";
+import Component from '../component'
+import Navbar from '../../components/navbar'
 
-export default class LandingPage implements Component
-{
-    public caca() {
-        React.navigate("/landing");
-    }
+export default class LandingPage extends Component {
+    public onNavClick() { }
 
     public render(): string {
         return `
-            <div>
-                <h1> Coucou </h1>
-                <button onClick="caca"> Here </button>
-            </div>
+            ${new Navbar()}
         `;
     }
 }
