@@ -6,8 +6,8 @@ export default class Podium extends Component {
 
     constructor(color: string, size: number) {
         super()
-        this._color = color;
-        this._size = size;
+        this._color = color
+        this._size = size
     }
 
     public render(): string {

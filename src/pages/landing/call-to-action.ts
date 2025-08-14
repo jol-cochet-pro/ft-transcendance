@@ -17,7 +17,7 @@ export default class CallToAction extends Component {
                         C'est parti
                     </button>
                 </div> 
-                <img src="call-to-action.png" alt="call-to-action" />
+                <img class="w-full" src="call-to-action.png" alt="call-to-action" />
             </section>
         `
     }
