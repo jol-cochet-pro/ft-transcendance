@@ -20,7 +20,7 @@ export default class Partners extends Component
             <section id="partners" class="flex flex-col items-center py-16 md:py-32 gap-8">
                 <h2>Entreprises partenaires</h2>
                 <div class="static md:relative"> 
-                    <img class="hidden md:flex" src="rich-people.png" alt="rich-people" />
+                    <img class="hidden md:flex" src="/rich-people.png" alt="rich-people" />
                     <div class="static md:absolute flex flex-col md:flex-row gap-8 justify-evenly w-full md:top-[50%] md:left-[50%] md:-translate-[50%]">
                         ${partnersCards}
                     </div>
