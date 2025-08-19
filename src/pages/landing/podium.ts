@@ -30,7 +30,7 @@ export default class Podium extends Component {
         return `
             <div class="flex flex-col gap-8 w-full">
                 <div class="flex flex-col items-center gap-2">
-                    <img src="pp.png" alt="profile picture" width=40 />
+                    <img src="/pp.png" alt="profile picture" width=40 />
                     <h3> ${this._name} </h3>
                 </div>
                 <div class="relative flex flex-col justify-center items-center bg-gradient-to-b from-surface to-black rounded-t-lg" style="height: ${size}px">

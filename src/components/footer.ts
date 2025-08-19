@@ -12,7 +12,7 @@ export default class Footer extends Component
     render(): string {
         return `
             <footer class="flex flex-col md:flex-row w-full items-center md:justify-evenly py-16 gap-8 bg-background">
-                <img src="logo.png" alt="logo" width=160 />
+                <img src="/logo.png" alt="logo" width=160 />
                 <div class="flex gap-8">
                     <div class="flex flex-col gap-2">
                         <h3> Games </h3>

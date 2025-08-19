@@ -21,7 +21,7 @@ export default class Navbar extends Component {
     public render(): string {
         return `
             <nav class="flex justify-between items-center w-full p-3">
-                <img src="logo.png" alt="logo" width=70 onClick=${this.register(() => this.onLogoClick())} />
+                <img src="/logo.png" alt="logo" width=70 onClick=${this.register(() => this.onLogoClick())} />
                 <div class="hidden sm:flex gap-6">
                     <button class="text-white transition hover:scale-110" onClick=${this.register(() => this.onClick('leaderboard'))}> Leaderboard </button>
                     <button class="text-white transition hover:scale-110" onClick=${this.register(() => this.onClick('games'))}> Jeux </button>
@@ -34,7 +34,7 @@ export default class Navbar extends Component {
                         <span class="text-white text-xs font-semibold"> Jolan Cochet </span>
                         <span class="text-white text-xs font-semibold opacity-70"> 154121 € </span>
                     </div>
-                    <img src="pp.png" alt="profile picture" width=30 />
+                    <img src="/pp.png" alt="profile picture" width=30 />
                 </div>
             </nav>
         `

@@ -19,7 +19,7 @@ export default class CardGame extends Component {
           <h2> ${this._name} </h1>
           <p> ${this._description} </p>
         </div>
-        <img class="rounded-lg" src="${this._imgUrl}" alt="game-img" />
+        <img class="rounded-lg" src="/${this._imgUrl}" alt="game-img" />
       </div>
     `
     }

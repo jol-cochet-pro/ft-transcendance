@@ -17,7 +17,7 @@ export default class CardTestimonial extends Component {
     return `
       <div class="flex flex-col top-10 gap-2 w-[300px] h-[240px] break-words bg-background p-4 shadow-lg rounded-lg">
         <div class="flex flex-row gap-4">
-          <img src="${this._imgUrl}" alt="profile picture" />
+          <img src="/${this._imgUrl}" alt="profile picture" />
           <div class="flex flex-col gap-1">
             <h3>${this._name}</h3>
             ${new FiveStars()}
