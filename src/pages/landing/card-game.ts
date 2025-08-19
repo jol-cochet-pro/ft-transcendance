@@ -16,8 +16,8 @@ export default class CardGame extends Component {
         return `
       <div class="relative flex transition hover:scale-110">
         <div class="absolute flex flex-col bottom-4 left-4 gap-2">
-          <h1 class="text-white text-2xl font-semibold"> ${this._name} </h1>
-          <p class="text-white text-sm"> ${this._description} </p>
+          <h2> ${this._name} </h1>
+          <p> ${this._description} </p>
         </div>
         <img class="rounded-lg" src="${this._imgUrl}" alt="game-img" />
       </div>

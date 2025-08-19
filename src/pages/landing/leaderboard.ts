@@ -13,7 +13,7 @@ export default class Leaderboard extends Component {
     render(): string {
         return `
             <section id="leaderboard" class="flex flex-col items-center p-8 gap-6">
-                <h2 class="text-white text-2xl font-semibold"> Leaderboard </h2>
+                <h2> Leaderboard </h2>
                 <div class="flex gap-4 items-end p-4 overflow-hidden">
                     ${new Podium(2, leaderboard[1].name, leaderboard[1].euros)}    
                     ${new Podium(1, leaderboard[0].name, leaderboard[0].euros)}    
@@ -21,15 +21,15 @@ export default class Leaderboard extends Component {
                 </div>
                 <hr class="bg-gradient-to-r from-background from-30% via to-70% via-background h-[1px] border-0" />
                 <div class="grid grid-rows-3 grid-cols-3 gap-x-4 gap-y-2">
-                    <p class="text-white text-xs font-semibold opacity-40"> Rank </p>
-                    <p class="text-white text-xs font-semibold opacity-40"> Username </p>
-                    <p class="text-white text-xs font-semibold opacity-40"> Gain </p>
-                    <p class="text-white text-xs font-semibold"> 4ème </p>
-                    <p class="text-white text-xs font-semibold"> ${leaderboard[3].name} </p>
-                    <p class="text-white text-xs font-semibold"> ${leaderboard[3].euros}€ </p>
-                    <p class="text-white text-xs font-semibold"> 5ème </p>
-                    <p class="text-white text-xs font-semibold"> ${leaderboard[4].name} </p>
-                    <p class="text-white text-xs font-semibold"> ${leaderboard[4].euros}€ </p>
+                    <h3 class="opacity-40"> Rank </h3>
+                    <h3 class="opacity-40"> Username </h3>
+                    <h3 class="opacity-40"> Gain </h3>
+                    <h3> 4ème </h3>
+                    <h3> ${leaderboard[3].name} </h3>
+                    <h3> ${leaderboard[3].euros}€ </h3>
+                    <h3> 5ème </h3>
+                    <h3> ${leaderboard[4].name} </h3>
+                    <h3> ${leaderboard[4].euros}€ </h3>
                 </div>
             </section>
         `

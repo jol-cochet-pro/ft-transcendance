@@ -17,7 +17,7 @@ export default class Testimonials extends Component {
       .join("");
     return `
       <section id="testimonials" class="flex flex-col items-center py-32 gap-6">
-        <h2 class="text-white text-2xl font-semibold">Avis</h2>
+        <h2>Avis</h2>
         <div class="relative w-[70%] h-[300px] overflow-hidden rounded-lg before:content-[''] before:absolute before:top-0 before:left-0 before:h-full before:w-20 before:bg-gradient-to-r before:from-background-light before:to-transparent after:content-[''] after:absolute after:top-0 after:right-0 after:h-full after:w-20 after:bg-gradient-to-l after:from-background-light after:to-transparent">
           <div class="absolute top-[50%] -translate-y-[50%] flex gap-10 p-4 slider-anim">
             ${testimonialCards}

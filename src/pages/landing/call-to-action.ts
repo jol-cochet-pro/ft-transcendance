@@ -25,8 +25,8 @@ export default class CallToAction extends Component {
             <section class="relative flex" > 
                 <div class="absolute flex flex-row lg:flex-col justify-center items-center w-full gap-8 top-[50%] left-[50%] -translate-1/2 scale-75 lg:scale-100"> 
                     <div class="flex flex-col max-w-[400px] gap-6">
-                        <h1 class="text-white text-3xl font-semibold italic" > “${quote.text}” </h1>  
-                        <p class="text-white text-sm font-semibold text-right"> - ${quote.author} </p>
+                        <h1 class="italic"> “${quote.text}” </h1>  
+                        <p class="font-semibold text-right"> - ${quote.author} </p>
                     </div>
                     <button class="text-background bg-primary w-fit px-6 py-4 rounded-full whitespace-nowrap transition-opacity hover:opacity-80" onClick=${this.register(this.onClick)}>
                         C'est parti

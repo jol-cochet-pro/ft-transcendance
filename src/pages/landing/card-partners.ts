@@ -15,7 +15,7 @@ export default class CardPartners extends Component
         return `
             <div class="flex flex-col items-center gap-2">
                 <img src=${this._imgUrl} alt="logo" width="80" />
-                <p class="text-white text-sm">${this._name}</p>
+                <p>${this._name}</p>
             </div>
         `;
     }

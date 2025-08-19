@@ -18,7 +18,7 @@ export default class Partners extends Component
             .join("");
         return `
             <section id="partners" class="flex flex-col items-center py-32 gap-6">
-                <h2 class="text-white text-2xl font-semibold">Entreprises partenaires</h2>
+                <h2>Entreprises partenaires</h2>
                 <div class="relative"> 
                     <img src="rich-people.png" alt="rich-people" />
                     <div class="absolute flex justify-evenly w-full top-[50%] left-[50%] -translate-[50%]">

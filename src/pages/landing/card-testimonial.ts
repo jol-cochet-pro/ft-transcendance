@@ -19,11 +19,11 @@ export default class CardTestimonial extends Component {
         <div class="flex flex-row gap-4">
           <img src="${this._imgUrl}" alt="profile picture" />
           <div class="flex flex-col gap-1">
-            <h3 class="text-white text-sm font-semibold">${this._name}</h3>
+            <h3>${this._name}</h3>
             ${new FiveStars()}
           </div>
         </div> 
-        <p class="text-white text-sm"> ${this._description} </p>
+        <p> ${this._description} </p>
       </div>
     `;
   }
