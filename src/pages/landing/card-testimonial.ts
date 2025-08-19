@@ -2,14 +2,12 @@ import FiveStars from "../../components/five-stars";
 import Component from "../../react/component";
 
 export default class CardTestimonial extends Component {
-  _id: string;
-  _name: string;
-  _description: string;
-  _imgUrl: string;
+  private _name: string;
+  private _description: string;
+  private _imgUrl: string;
 
-  constructor(id: number, name: string, description: string, imgUrl: string) {
+  constructor(name: string, description: string, imgUrl: string) {
     super();
-    this._id = `testimonial-card-${id}`;
     this._name = name;
     this._description = description;
     this._imgUrl = imgUrl;

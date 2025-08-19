@@ -5,20 +5,23 @@ import Leaderboard from './leaderboard'
 import Games from './games'
 import Story from './story'
 import Testimonials from './testimonials'
+import Partners from './partners'
+import Footer from '../../components/footer'
 
 export default class LandingPage extends Component {
-    public render(): string {
+    render(): string {
         return `
             <div class="flex flex-col">
                 ${new Navbar()}
                 ${new CallToAction()}
                 ${new Leaderboard()}
                 ${new Games()}
-                <div class="bg-gradient-to-b from-background-light from-16% via to-63% via-background-light">
+                <div class="bg-background-light">
                     ${new Story()}
                     ${new Testimonials()}
+                    ${new Partners()}
                 <div>
-                <div class="h-[500px]"> </div> 
+                ${new Footer()}
             </div>
         `
     }

@@ -5,15 +5,18 @@
     --color-background: rgba(40, 40, 48, 1);
     --color-surface: rgba(52, 53, 65, 1);
     --color-primary: rgba(215, 195, 60, 1);
+    --color-primary-hover: rgba(169, 152, 35, 1);
+}
 
-    --animate-slider: slide 40s linear infinite;
+.slider-anim {
+    animation: slider 40s linear infinite
+}
 
-    @keyframes slide {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%); /* la moitié, car on a doublé */
-        }
+@keyframes slider {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* la moitié, car on a doublé */
     }
 }
