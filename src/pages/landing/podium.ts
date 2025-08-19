@@ -28,12 +28,12 @@ export default class Podium extends Component {
     public render(): string {
         const { color, size } = this.rankToStyle(this._rank);
         return `
-            <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-8 w-full">
                 <div class="flex flex-col items-center gap-2">
                     <img src="pp.png" alt="profile picture" width=40 />
                     <h3> ${this._name} </h3>
                 </div>
-                <div class="relative flex flex-col justify-center items-center bg-gradient-to-b from-surface to-black min-w-[150px] max-w-[200px] rounded-t-lg" style="height: ${size}px">
+                <div class="relative flex flex-col justify-center items-center bg-gradient-to-b from-surface to-black rounded-t-lg" style="height: ${size}px">
                     <div class="absolute rounded-lg w-fit p-1.5 top-0 left-[50%] -translate-[50%]" style="background-color: ${color}">
                         <i data-lucide="trophy" class="stroke-[#EDEDEDED]" ></i>
                     </div>

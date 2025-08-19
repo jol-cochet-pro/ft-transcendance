@@ -22,8 +22,8 @@ export default class CallToAction extends Component {
         const quoteIndex = this.randomInt(quotes.length - 1);
         const quote = quotes[quoteIndex];
         return `
-            <section class="relative flex" > 
-                <div class="absolute flex flex-row lg:flex-col justify-center items-center w-full gap-8 top-[50%] left-[50%] -translate-1/2 scale-75 lg:scale-100"> 
+            <section class="relative flex h-[400px]" > 
+                <div class="absolute flex flex-col justify-center items-center w-full gap-8 top-[50%] left-[50%] -translate-1/2 scale-75 lg:scale-100"> 
                     <div class="flex flex-col max-w-[400px] gap-6">
                         <h1 class="italic"> “${quote.text}” </h1>  
                         <p class="font-semibold text-right"> - ${quote.author} </p>
@@ -32,7 +32,7 @@ export default class CallToAction extends Component {
                         C'est parti
                     </button>
                 </div> 
-                <img class="w-full" src="call-to-action.png" alt="call-to-action" />
+                <img class="w-full object-cover" src="call-to-action.png" alt="call-to-action" />
             </section>
         `
     }

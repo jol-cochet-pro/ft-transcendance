@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import 'typography.css';
 
 @theme {
     --color-background-light: rgba(52, 53, 65, 0.4);
