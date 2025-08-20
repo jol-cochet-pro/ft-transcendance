@@ -10,6 +10,7 @@
         "prettier": "prettier . --write"
     },
     "devDependencies": {
+        "@types/chart.js": "^2.9.41",
         "@types/node": "^24.2.1",
         "prettier": "3.6.2",
         "typescript": "~5.8.3",
@@ -17,6 +18,7 @@
     },
     "dependencies": {
         "@tailwindcss/vite": "^4.1.11",
+        "chart.js": "^4.5.0",
         "lucide": "^0.539.0",
         "tailwindcss": "^4.1.11"
     }

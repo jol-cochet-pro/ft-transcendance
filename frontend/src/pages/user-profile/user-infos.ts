@@ -18,7 +18,7 @@ export default class UserInfos extends Component
     public render(): string {
         const formatter = Intl.NumberFormat("fr-FR");
         return `
-            <section class="flex justify-between">
+            <section class="flex flex-col md:flex-row gap-4 justify-between">
                 <div class="flex gap-8">
                     <img src="/${this._imgUrl}" alt="profile-picture" width=200 />
                     <div class="flex flex-col">
