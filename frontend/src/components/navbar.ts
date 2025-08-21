@@ -15,7 +15,7 @@ export default class Navbar extends Component {
     }
 
     private onProfileClick() {
-        React.navigate("/profile/me");
+        React.navigate("/user");
     }
 
     public render(): string {
