@@ -28,7 +28,7 @@ export default class CallToAction extends Component {
                         <h1 class="italic"> “${quote.text}” </h1>  
                         <p class="font-semibold text-right"> - ${quote.author} </p>
                     </div>
-                    <button class="text-background bg-primary w-fit px-6 py-4 rounded-full whitespace-nowrap transition-opacity hover:opacity-80" onClick=${this.register(this.onClick)}>
+                    <button class="text-background bg-primary w-fit px-6 py-4 rounded-full whitespace-nowrap transition-opacity hover:opacity-80" onClick=${this.func(this.onClick)}>
                         C'est parti
                     </button>
                 </div> 

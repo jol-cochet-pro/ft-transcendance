@@ -57,7 +57,7 @@ export default class CardGame extends Component
                         </h3>
                     </div>
                 </div>
-                <button class="text-background bg-primary w-fit px-6 py-3 rounded-full whitespace-nowrap transition-opacity hover:opacity-80" onClick=${this.register(this.onClick)}>
+                <button class="text-background bg-primary w-fit px-6 py-3 rounded-full whitespace-nowrap transition-opacity hover:opacity-80" onClick=${this.func(this.onClick)}>
                     Jouer
                 </button>
             </div>

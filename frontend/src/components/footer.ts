@@ -16,14 +16,14 @@ export default class Footer extends Component
                 <div class="flex gap-8">
                     <div class="flex flex-col gap-2">
                         <h3> Games </h3>
-                        <p onClick=${this.register(() => this.onClick("blackjack"))}> Blackjack </p>
-                        <p onClick=${this.register(() => this.onClick("roulette"))}> Roulette </p>
-                        <p onClick=${this.register(() => this.onClick("slot-machine"))}> Machine à sous </p>
+                        <p onClick=${this.func(() => this.onClick("blackjack"))}> Blackjack </p>
+                        <p onClick=${this.func(() => this.onClick("roulette"))}> Roulette </p>
+                        <p onClick=${this.func(() => this.onClick("slot-machine"))}> Machine à sous </p>
                     </div>
                     <div class="flex flex-col gap-2">
                         <h3> Liens rapides </h3>
-                        <p onClick=${this.register(() => this.onClick("landing-page"))}> Accueil </p>
-                        <p onClick=${this.register(() => this.onClick("profile"))}> Profile </p>
+                        <p onClick=${this.func(() => this.onClick("landing-page"))}> Accueil </p>
+                        <p onClick=${this.func(() => this.onClick("profile"))}> Profile </p>
                     </div>
                 </div>
                 <div>
