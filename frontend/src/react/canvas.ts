@@ -13,7 +13,7 @@ export default class Canvas extends Component
     }
 
     private _registerCanvas() {
-        return this.register((el) => { 
+        return this.func((el) => { 
             const canvas = el as HTMLCanvasElement
             if (!canvas.isConnected || !canvas.ownerDocument?.defaultView) {
                 requestAnimationFrame(() => this._renderCanvas(canvas))

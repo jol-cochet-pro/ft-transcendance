@@ -1,39 +1,87 @@
-import Component from './component'
+import Component from "./component";
 import { createIcons, icons } from "lucide";
 
 export default class HTMLRenderer {
-    public render(page: Component) {
-        const app = document.querySelector('#app')
-        app!.innerHTML = ''
-        const html = this.parse(page)
-        app!.appendChild(html)
+    private static _instance: HTMLRenderer | null = null;
 
+    private constructor() {}
+
+    public static get instance(): HTMLRenderer {
+        if (!this._instance) {
+            this._instance = new HTMLRenderer();
+        }
+        return this._instance;
+    }
+
+    public render(page: Component): void {
+        const app = document.getElementById("app");
+        if (!app) throw new Error("#app introuvable");
+
+        app.innerHTML = "";
+        app.appendChild(this.build(page));
         createIcons({ icons });
     }
 
-    private parse(page: Component): ChildNode {
-        const htmlStr: string = page.render()
-        const parser = new DOMParser()
-        const html = parser.parseFromString(htmlStr, 'text/html')
-        const body = html.body
-        const element = body.firstChild
+    public refresh(page: Component): void {
+        const oldElement = document.getElementById(`__child__${page.id}`);
+        if (!oldElement) return;
+
+        const newElement = this.build(page);
+        oldElement.replaceWith(newElement);
+        createIcons({ icons });
+    }
+
+    private build(page: Component): HTMLElement {
+        const htmlStr = page.completeRender();
+        const element = this.parseHTML(htmlStr);
+
+        this.addChildren(element);
+        this.addEventListeners(element);
+
+        return element;
+    }
+
+    private parseHTML(htmlStr: string): HTMLElement {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlStr, "text/html");
+        const element = doc.body.firstElementChild as HTMLElement | null;
+
         if (!element) {
-            throw new Error('Error in template')
+            throw new Error("Template vide ou invalide");
         }
-        for (const clickable of body.querySelectorAll<HTMLElement>('[onclick]')) {
-            const id = clickable.getAttribute('onclick')
+        return element;
+    }
+
+    private addEventListeners(root: HTMLElement): void {
+        root.querySelectorAll<HTMLElement>("[onclick]").forEach(el => {
+            const id = el.getAttribute("onclick");
             if (id && Component.handlers[id]) {
-                clickable.removeAttribute('onclick')
-                clickable.addEventListener('click', () => Component.handlers[id](clickable))
+                el.removeAttribute("onclick");
+                el.addEventListener("click", () => Component.handlers[id](el));
             }
-        }
-        for (const loadable of body.querySelectorAll<HTMLElement>('canvas[onload]')) {
-            const id = loadable.getAttribute('onload')
+        });
+
+        root.querySelectorAll<HTMLCanvasElement>("canvas[onload]").forEach(canvas => {
+            const id = canvas.getAttribute("onload");
             if (id && Component.handlers[id]) {
-                loadable.removeAttribute('onload');
-                Component.handlers[id](loadable);
+                canvas.removeAttribute("onload");
+                Component.handlers[id](canvas);
             }
-        }
-        return element
+        });
+    }
+
+    private addChildren(root: HTMLElement): void {
+        root.querySelectorAll<HTMLElement>("template[id^='__child__']").forEach(child => {
+            const comp = Component.children[child.id];
+            if (!comp) return;
+
+            const element = this.parseHTML(comp.completeRender());
+            element.id = child.id;
+
+            this.addChildren(element);
+            this.addEventListeners(element);
+
+            child.replaceWith(element);
+        });
     }
 }
