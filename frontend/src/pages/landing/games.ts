@@ -4,7 +4,7 @@ import CardGame from './card-game'
 export default class Games extends Component {
     render(): string {
         return `
-            <section id="games" class="flex flex-col items-center p-8 gap-6">
+            <section data-name="games" class="flex flex-col items-center p-8 gap-6">
                 <h2> Jeux </h2>
                 <div class="flex flex-col md:flex-row gap-4 items-end p-4">
                     ${new CardGame('Blackjack', 'Jeu de cartes emblématique, le blackjack mêle stratégie et tension à chaque main face au croupier.', 'blackjack.png')}

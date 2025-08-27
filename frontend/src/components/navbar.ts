@@ -3,7 +3,7 @@ import React from '../react/react';
 
 export default class Navbar extends Component {
     private onClick(url: string) {
-        const el = document.getElementById(url);
+        const el = document.querySelector(`section[data-name=${url}]`);
         if (!el) return ;
         el.scrollIntoView({
             behavior: "smooth"

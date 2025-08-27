@@ -1,0 +1,6 @@
+{
+  "name": "shared",
+  "dependencies": {
+    "zod": "^4.1.3"
+  }
+}
