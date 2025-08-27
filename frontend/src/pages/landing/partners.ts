@@ -17,7 +17,7 @@ export default class Partners extends Component
             .map((partner) => new CardPartners(partner.name, partner.imgUrl))
             .join("");
         return `
-            <section id="partners" class="flex flex-col items-center py-16 md:py-32 gap-8">
+            <section data-name="partners" class="flex flex-col items-center py-16 md:py-32 gap-8">
                 <h2>Entreprises partenaires</h2>
                 <div class="static md:relative"> 
                     <img class="hidden md:flex" src="/rich-people.png" alt="rich-people" />

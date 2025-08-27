@@ -3,7 +3,7 @@ import Component from '../../react/component'
 export default class Story extends Component {
   render(): string {
     return `
-      <section id="story" class="flex flex-col items-center py-16 md:py-32 gap-6">
+      <section data-name="story" class="flex flex-col items-center py-16 md:py-32 gap-6">
           <h2> Histoire </h2>
           <div class="flex flex-col md:flex-row gap-24 items-center p-4 min-w-[350px] w-[70%] max-w-[1000px]">
             <img src="/logo.png" alt="logo" class="w-[50%]" />
